@@ -26,7 +26,7 @@ def main():
         to_email = '' # Email address email is being sent to.
         sendMail(from_email, from_email_password, email_subject, email_body, to_email)
         print('Sent ' + str(count))
-        time.sleep(5)
+        time.sleep(5) # Change this to change the interval between sending email.
 
 if __name__=="__main__":
     main()
