@@ -1,5 +1,6 @@
 import smtplib
 import time
+import sys
 
 
 def send_mail(from_email, from_email_password, email_subject, email_body, to_email):
@@ -19,13 +20,14 @@ def send_mail(from_email, from_email_password, email_subject, email_body, to_ema
 
 def main():
     count = 1  # Counter for keeping track of number of emails sent.
+    from_email = sys.argv[1]  # Email address email is being sent from.
+    from_email_password = sys.argv[2]  # Password of email account email is being sent from.
+    email_subject = sys.argv[3]  # Subject of the email to be sent.
+    email_body = sys.argv[4]  # Body of the email to be sent.
+    to_email = sys.argv[5]  # Email address email is being sent to.
+
     while True:
         count += 1
-        from_email = ''  # Email address email is being sent from.
-        from_email_password = ''  # Password of email account email is being sent from.
-        email_subject = ''  # Subject of the email to be sent.
-        email_body = ''  # Body of the email to be sent.
-        to_email = ''  # Email address email is being sent to.
         send_mail(from_email, from_email_password, email_subject, email_body, to_email)
         print('Sent ' + str(count))
         time.sleep(5)  # Change this to change the interval between sending email.
