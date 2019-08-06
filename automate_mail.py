@@ -18,7 +18,7 @@ def send_mail(from_email, from_email_password, email_subject, email_body, to_ema
 
 
 def main():
-    count = 1  # Counter for keeping track of number of emails sent.
+    count = 0  # Counter for keeping track of number of emails sent.
     while True:
         count += 1
         from_email = ''  # Email address email is being sent from.
