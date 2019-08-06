@@ -18,14 +18,15 @@ def send_mail(from_email, from_email_password, email_subject, email_body, to_ema
 
 
 def main():
-    count = 1  # Counter for keeping track of number of emails sent.
+    count = 0  # Counter for keeping track of number of emails sent.
+    from_email = input("Enter the email address you wanna send the email from:\n")
+    from_email_password = input("Enter the password of that email addresss:\n")
+    email_subject = input("Enter the subject of the email:\n")
+    email_body = input("Enter the body of the email:\n")
+    to_email = input("Enter the email address you wanna send the email to:\n")
+
     while True:
         count += 1
-        from_email = ''  # Email address email is being sent from.
-        from_email_password = ''  # Password of email account email is being sent from.
-        email_subject = ''  # Subject of the email to be sent.
-        email_body = ''  # Body of the email to be sent.
-        to_email = ''  # Email address email is being sent to.
         send_mail(from_email, from_email_password, email_subject, email_body, to_email)
         print('Sent ' + str(count))
         time.sleep(5)  # Change this to change the interval between sending email.
