@@ -19,7 +19,7 @@ def send_mail(from_email, from_email_password, email_subject, email_body, to_ema
 
 
 def main():
-    count = 1  # Counter for keeping track of number of emails sent.
+    count = 0  # Counter for keeping track of number of emails sent.
     from_email = sys.argv[1]  # Email address email is being sent from.
     from_email_password = sys.argv[2]  # Password of email account email is being sent from.
     email_subject = sys.argv[3]  # Subject of the email to be sent.
